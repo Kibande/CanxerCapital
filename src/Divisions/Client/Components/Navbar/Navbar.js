@@ -314,7 +314,9 @@ function EmptyFun() {
                             }
 
                             {
-                                !cookies[CURRENT_USER_COOKIE_NAME]['userSecondName'] ? <div className="headerBtns flex">
+                                // !cookies[CURRENT_USER_COOKIE_NAME]??['userSecondName'] ?
+                                
+                                <div className="headerBtns flex">
 
 
                                     <button className="btn loginBtn" onClick={() => {
@@ -336,17 +338,22 @@ function EmptyFun() {
                                     }}>
                                         <a href="#" >Sign Up</a>
                                     </button>
-                                </div> : <div className="singleCustomer flex">
-                                    {/* <img src={cookies[CURRENT_USER_COOKIE_NAME]['dpImage']} alt="Customer Image" /> */}
-                                    <img src={users[0].dpImage} alt="Customer Image" />
-                                    <div className="customerDetails">
-                                        <span className="name">{cookies[CURRENT_USER_COOKIE_NAME]['userSecondName']}</span>
-                                        <small onClick={() => {
-                                            setModalLogOut(true); removeNav();
-                                        }} >Logout</small>
-                                    </div>
+                                </div> 
+                                
+                                // : 
+                                
+                                
+                                // <div className="singleCustomer flex">
+                                //     {/* <img src={cookies[CURRENT_USER_COOKIE_NAME]['dpImage']} alt="Customer Image" /> */}
+                                //     <img src={users[0].dpImage} alt="Customer Image" />
+                                //     <div className="customerDetails">
+                                //         <span className="name">{cookies[CURRENT_USER_COOKIE_NAME]['userSecondName']}</span>
+                                //         <small onClick={() => {
+                                //             setModalLogOut(true); removeNav();
+                                //         }} >Logout</small>
+                                //     </div>
 
-                                </div>
+                                // </div>
                             }
                         </ul>
 

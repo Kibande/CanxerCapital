@@ -30,11 +30,12 @@ const ChatPopup = (props) => {
             <div className="chat-header" onClick={handleToggleExpand}>
 
                 <h3>Customer Care</h3>
-                {cookies[CURRENT_USER_COOKIE_NAME]['userSecondName'] && newMessage && <BsBellFill className="notification-dot" />}
+                {/* {cookies[CURRENT_USER_COOKIE_NAME]['userSecondName'] && newMessage && <BsBellFill className="notification-dot" />} */}
             </div>
             {props.chatPopUpExpanded && (
                 <div className="chat-body">
-                    {!cookies[CURRENT_USER_COOKIE_NAME]['userSecondName'] ? 
+                    {/* {!cookies[CURRENT_USER_COOKIE_NAME]['userSecondName'] ?  */}
+                    {true ? 
                     <>
                     <Container>
                         <p>
