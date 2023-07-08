@@ -1,23 +1,44 @@
-import React from "react";
-// import { Route, Routes } from 'react-router-dom';
+import { ThemeProvider } from "styled-components";
+import { lightTheme } from "./Themes/Theme";
+import GlobalStyle from "./globalStyles";
+import Main from "./pages/Main";
+import { AnimatePresence } from "framer-motion";
+import { useMemo } from "react";
+import { useMoralis } from "react-moralis";
 
-import Client from './Divisions/Client/Client';
-// import Admin from './Divisions/Admin/Admin';
+function App() {
+  const { isWeb3Enabled, enableWeb3, isAuthenticated,isInitializing,isAuthenticating, isWeb3EnableLoading,chainId,network } =
+  useMoralis();
 
+useMemo(() => {
 
-const App =() => {
+  async function checkConnection(params) {
+    const connectorId = window.localStorage.getItem("connectorId");
+    if (isAuthenticated && !isWeb3Enabled && !isWeb3EnableLoading && !isInitializing && !isAuthenticating){
+       await enableWeb3({ provider: connectorId });
+    }else if(!isWeb3Enabled && !isWeb3EnableLoading && !isInitializing && !isAuthenticating){
+      await enableWeb3();
+    }
+  }
+ try {
+  checkConnection();
+ } catch (error) {
+  
+ }
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, [isAuthenticated, isWeb3Enabled,chainId,network]);
 
-
-    // return (
-    // <Routes>
-    //     <Route exact path='/' element={<Client />}></Route>,
-    //     {/* <Route exact path='/' element={<Admin />}></Route> */}
-    // </Routes>
-    // )
-
-
-    return <Client />
+  return (
+    <>
+      <GlobalStyle />
+      <ThemeProvider theme={lightTheme}>
+        <AnimatePresence exitBeforeEnter>
+         <Main/>
+        </AnimatePresence>
+      </ThemeProvider>
+    </>
+  );
 }
 
-export default App
+export default App;
