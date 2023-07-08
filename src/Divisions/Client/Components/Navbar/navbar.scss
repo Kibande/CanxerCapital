@@ -1,0 +1,423 @@
+:root {
+    --PrimaryColor: hsl(26,93%,50%);
+    --HoverColor: hsl(26,90%,42%);
+    --whiteColor: hsl(0,0%,100%);
+    --blackColor: hsl(0,0%,10%);
+    --textColor: hsl(240,1%,48%);
+    --whiteColorDeam: hsl(0,0%,93%);
+    --greyBg: hsl(0,0%,96%);
+    --greyText: rgb(190,190,190);
+    --inputColor: hsl(330,12%,97%);
+}
+
+
+.contactUsForm{
+    width: 60%;
+    padding:2rem 3rem;
+    gap: 1rem;
+    grid-template-columns: repeat(2,1fr);
+
+    .inputField{
+        margin-top: 2rem;
+
+        label{
+            display: block;
+            color: var(--textColor);
+            font-weight: 500;
+            font-size: 13px;
+            padding-bottom: .4rem;
+        }
+    
+        textarea,input{
+            width: 100%;
+            max-width: 100%;
+            background: var(--inputColor);
+            border-radius: 10px;
+            border: none;
+            padding: 10px;
+            font-size: 13px;
+            font-weight: 500;
+    
+            &::placeholder{
+                font-size: 13px;
+                opacity: .5;
+                font-weight: 400;
+            }
+    
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+
+
+
+    .btn{
+        width: 40%;
+        justify-self: center;
+        padding: .6rem 1.5rem;
+        margin-top: 2rem;
+        color: var(--whiteColor);
+        font-weight: 600;
+    }
+}
+
+.userAuthentication{
+    width: 400px;
+    padding:2rem 3rem;
+    gap: 1rem;
+    justify-self: center;
+    grid-template-columns: repeat(2,1fr);
+
+    .inputField{
+        margin-top: 2rem;
+
+        label{
+            display: block;
+            color: var(--textColor);
+            font-weight: 500;
+            font-size: 13px;
+            padding-bottom: .4rem;
+        }
+    
+        input{
+            width: 100%;
+            background: var(--inputColor);
+            border-radius: 10px;
+            border: none;
+            padding: 10px;
+            font-size: 13px;
+            font-weight: 500;
+    
+            &::placeholder{
+                font-size: 13px;
+                opacity: .5;
+                font-weight: 400;
+            }
+    
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+
+
+
+    .btn{
+        width: 100%;
+        padding: .6rem 1.5rem;
+        margin-top: 2rem;
+        color: var(--whiteColor);
+        font-weight: 600;
+    }
+}
+
+.navBarSection{
+   
+
+    .header{
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: transparent;
+        width: 100%;
+        padding: 1rem;
+        z-index: 1000;
+
+        .logoDiv{
+            .logo{
+                color: var(--PrimaryColor);
+                font-weight: 500;
+             
+                cursor: pointer;
+                align-items: center;
+                justify-content: center;
+
+                .icon{
+                    color: var(--PrimaryColor);
+                    font-size: 25px;
+                    margin-right: 10px;
+                    height: 25px;
+                    width: 25px;
+                }
+            }
+        }
+
+        .singleCustomer{
+            align-items: flex-start;
+            justify-content: space-between;
+
+            img{
+                width: 40px;
+                height: 40px;
+                object-fit: cover;
+                border-radius: 50%;
+                box-shadow: 0 2px 4px var(--itemCardColor);
+                margin-right: 1rem;
+            }
+
+            .customerDetails{
+                flex: 1;
+
+                .name{
+                    font-size: var(--h3FontSize);
+                    color: var(--textColor);
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                    display: block;
+                }
+
+                small{
+                    color: var(--textColor);
+                    font-size: 0.7rem;
+                    font-size: var(--smallFontSize);
+                    cursor: pointer;
+                    
+                }
+            }          
+        }
+
+        @media screen and (max-width:768px) {
+            .navBar{
+                background: var(--greyBg);
+                position: absolute;
+                height: max-content;
+                padding: 1rem;
+                width: 100%;
+                top: 0;
+                left: -500%;
+                box-shadow: 0 2px 4px rgba(200,209,209,0.994);
+                transition: .5s ease;
+                z-index: 1000;
+
+
+
+                .navLists{
+                    flex-direction: column;
+                    justify-content: center;
+                    width: 100%;
+                    margin: auto;
+
+                    .navItem{
+                        padding: 1rem 0;
+
+                        .navLink{
+                            color: var(--textColor);
+                            font-size: .9rem;
+                            font-weight: 600;
+                            &:hover{
+                                color:var(--PrimaryColor);
+                            }
+                        }
+
+                        .active{
+                            color: var(--PrimaryColor);
+                        }
+                    }
+
+                    .headerBtns{
+                            flex-direction: column;
+                            .btn{
+                                margin-top: 1rem;
+
+                                a{
+                                    font-weight: 600;
+
+                                    &:hover{
+                                        color: var(--whiteColor);
+                                    }
+                                }
+                            }
+
+                            .loginBtn{
+                                background: none;
+                                border: 1px solid var(--PrimaryColor);
+
+                                a{
+                                    color: var(--PrimaryColor);
+                                }
+
+                                &:hover{
+                                    background: var(--HoverColor);
+                                       a{
+                                        color: var(--whiteColor);
+                                        }
+                                }
+                            }
+                    }
+                }
+
+                .closeNavbar{
+                    position: absolute;
+                    top: 1rem;
+                    right: 1.5rem;
+                    color: var(--PrimaryColor);
+                    &:hover .icon{
+                        color:var(--HoverColor);
+                    }
+                }
+            }
+
+            .activeNavbar{
+                left:0;
+            }
+        }
+
+        .toggleNavbar{
+            .icon{
+                font-size: 25px;
+                color: var(--whiteColor);
+                &:hover{
+                    color: var(--PrimaryColor);
+                }
+            }
+        }
+    }
+
+    .activeHeader{
+        background: rgba(0, 0, 0, 0.8);
+        box-shadow: 0 2px 8px 2px rgba(104, 104, 104, 0.45);
+    }
+}
+
+
+@media screen and (min-width: 769px) {
+
+    .navBarSection{
+        .toggleNavbar, .closeNavbar{
+            display: none;
+        }
+        
+    
+        .header{
+            padding: 1.5rem 2rem;
+
+            .singleCustomer{
+                .customerDetails{
+                    .name{
+                        color: var(--whiteColor);
+                    }
+
+                    small{
+                        color: rgb(206, 204, 204);
+                    }
+                }
+            }
+
+
+
+            .navBar{
+                .navLists{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: row;
+
+                    .navItem{
+                        .navLink{
+                            color: var(--whiteColor);
+                            padding: 0 .45rem;
+                            font-size: .9rem;
+                            font-weight: 400;
+                            &:hover{
+                                color: var(--PrimaryColor);
+                            }
+                        }
+
+                        .active{
+                            color: var(--PrimaryColor);
+                        }
+
+
+                    }
+
+                    .btn{
+                        margin-left: 1rem;
+
+                        a{
+                            color: var(--whiteColor);
+                            font-weight: 500;
+                        }
+                    }
+
+                    .loginBtn{
+                        background: none;
+                        border: 1px solid var(--PrimaryColor);
+
+                        &:hover{
+                            background: var(--PrimaryColor);
+
+                            a{
+                                color: var(--whiteColor);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+@media screen and (min-width: 960px) {
+
+    .header{
+
+        .navBar{
+            .navLists{
+                .navItem{
+                    padding: 0 .7rem;
+                }
+            }
+        }
+    }
+    
+}
+
+
+@media screen and (min-width: 1140px) {
+
+    .header{
+       padding: 1rem 8.5rem !important;
+
+       
+
+        .navBar{
+            .navLists{
+                .navItem{
+                    padding: 0 .7rem;
+                }
+            }
+        }
+    }
+    
+}
+
+
+
+@media screen and (max-width: 900px) {
+
+    .contactUsForm{
+        width: 100%;
+    }
+    .userAuthentication{
+       width: 300px;
+       padding: 2rem;
+    }
+    
+}
+
+
+@media screen and (max-width: 400px) {
+
+    .userAuthentication{
+       width: 250px;
+       padding: 1rem;
+    }
+    
+}

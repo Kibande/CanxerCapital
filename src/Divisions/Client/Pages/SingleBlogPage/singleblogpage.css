@@ -1,0 +1,34 @@
+:root {
+  --PrimaryColor: hsl(26,93%,50%);
+  --HoverColor: hsl(26,90%,42%);
+  --whiteColor: hsl(0,0%,100%);
+  --blackColor: hsl(0,0%,10%);
+  --textColor: hsl(240,1%,48%);
+  --whiteColorDeam: hsl(0,0%,93%);
+  --greyBg: hsl(0,0%,96%);
+  --greyText: rgb(190,190,190);
+  --inputColor: hsl(330,12%,97%);
+}
+
+.singleBlogPage {
+  display: flex;
+  text-align: right;
+  justify-content: space-between;
+}
+
+.blogImage {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 5px solid var(--greyBg);
+  box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.406);
+  overflow: hidden;
+}
+.blogImage img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.blogdetails {
+  text-align: left;
+}/*# sourceMappingURL=singleblogpage.css.map */

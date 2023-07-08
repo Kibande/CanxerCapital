@@ -1,0 +1,78 @@
+/* Colors */
+:root {
+  --PrimaryColor: hsl(26,93%,50%);
+  --HoverColor: hsl(26,90%,42%);
+  --paleOrange: hsl(40, 75%, 89%);
+  --whiteColor: hsl(0,0%,100%);
+  --blackColor: hsl(0,0%,10%);
+  --textColor: hsl(240,1%,48%);
+  --bgColor: hsl(220,10%,94%);
+  --whiteColorDeam: hsl(0,0%,93%);
+  --greyBg: hsl(0,0%,96%);
+  --greyText: rgb(190,190,190);
+  --inputColor: hsl(330,12%,97%);
+  /* Font ang Typography */
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: .938rem;
+  --smallFontSize: .813rem;
+  --smallestFontSize: .75rem;
+}
+
+.rdw-editor-main {
+  background-color: #f5f6f9;
+  border: 1px solid #eee;
+  margin-bottom: 17px;
+  padding: 7px 17px 7px 17px;
+  line-height: 27px;
+  overflow: scroll;
+  max-height: 400px;
+}
+
+.public-DraftEditor-content {
+  min-height: 300px;
+}
+
+.rdw-dropdown-optionwrapper {
+  width: 100% !important;
+}
+
+.postEditor {
+  margin-top: 2rem;
+}
+.postEditor label {
+  display: block;
+  color: var(--textColor);
+  font-weight: 500;
+  font-size: 13px;
+  padding-bottom: 0.4rem;
+}
+.postEditor input {
+  width: 100%;
+  background: var(--inputColor);
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.postEditor input::-moz-placeholder {
+  font-size: 13px;
+  opacity: 0.5;
+  font-weight: 400;
+}
+.postEditor input::placeholder {
+  font-size: 13px;
+  opacity: 0.5;
+  font-weight: 400;
+}
+.postEditor input:focus {
+  outline: none;
+}
+.postEditor .btn {
+  color: var(--whiteColor);
+  background: var(--PrimaryColor);
+  font-weight: 600;
+}/*# sourceMappingURL=posteditor.css.map */
